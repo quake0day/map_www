@@ -1,0 +1,34 @@
+ ******GRWAVE  (RELEASE 2 AT 23/10/1985 )********
+ *****COPYRIGHT  (C)   GEC   PLC   1985   *********
+ CCIR Personal Computer Version 1989 Study Group 5 IWP5/1
+ 
+ GRWAVE COMPUTES FIELD STRENGTH-DISTANCE VARIATIONS
+ FOR A HOMOGENEOUS CURVED EARTH WITH EXPONENTIALLY
+ DECREASING REFRACTIVE INDEX
+
+
+                     ATMOSPHERIC CONSTANTS
+                         REFRACTIVITY =315.00  (N-UNITS)
+                         SCALE HEIGHT = 7.350  KM
+
+                     GROUND CONSTANTS
+                         RELATIVE PERMITTIVITY =    10.772
+                         CONDUCTIVITY =1.0000D-02  SIEMENS/METRE
+
+                     HORIZONTAL POLARISATION
+
+                     MINIMUM DISTANCE =   403.967  KILOMETRES
+                     MAXIMUM DISTANCE =   404.967  KILOMETRES
+                     DSTEP            =    10.000  KILOMETRES
+
+
+                     FREQUENCY =  900.000 MHZ
+
+                     TRANSMITTER HEIGHT =   245.3  METRES
+                     RECIEVER HEIGHT    =   209.9  METRES
+
+                     DISTANCE      FIELD STRENGTH     BASIC TRANSMISSION LOSS
+                        KM            DB(UV/M)               DB           (G) 
+                                                                          (R)
+                        403.97       -199.56               394.61
+                        404.97       -200.45               395.49

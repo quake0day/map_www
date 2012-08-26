@@ -1,0 +1,10 @@
+name: analysisme
+version: 1
+accesskey: xljwmj4j4m
+cron:
+   - description: cron me
+	 url: data.php?uid=1651712685
+	 schedule: */30 * * * *
+   - description: cron yr
+	 url: data.php?uid=1876063045
+	 schedule: */30 * * * *

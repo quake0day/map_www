@@ -1,0 +1,74 @@
+
+<html>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<head>
+<title>Google Maps JavaScript API v3 Example: ProjectedOverlayTest </title>
+<script type="text/javascript"
+    src="https://maps.google.com/maps/api/js?sensor=true">
+</script>
+<script type="text/javascript" src="js/ProjectedOverlay.js"></script>
+<script type="text/javascript">
+
+  var map;
+
+  
+  var overlay ;
+
+
+
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(40,-95);
+    var myOptions = {
+      key: 'AIzaSyA5rIPRrzlI8xgWMcA1dV92_Tn_iyT04ps',
+      zoom: 3,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      sensor: 'true'
+    }
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+
+   overlayAdd() ;
+   // overlayAdd() ;
+  }
+
+// Add the overlay
+
+   function overlayAdd()
+   {
+    var sw = new google.maps.LatLng(-47.27,166.31) ;
+    var ne = new google.maps.LatLng(-34.107,178.79) ;
+    var bounds = new google.maps.LatLngBounds(sw,ne) ;
+    overlay = new ProjectedOverlay(map,'./newz_cut.png', bounds, {}) ;
+    document.getElementById("overlayToggle").innerHTML =  '<a href="javascript:overlayRemove()">Remove Overlay</a>' ;
+   }
+
+// Remove the overlay
+
+  function overlayRemove()
+  {
+   if ( !overlay )
+   {
+    return ;
+   }
+   overlay.remove() ;
+   overlay = null ;
+   document.getElementById("overlayToggle").innerHTML =  '<a href="javascript:overlayAdd()">Add Overlay</a>' ;
+  }
+  
+
+</script>
+</head>
+<body style="margin:0px; padding:0px;" onload="initialize()">
+  <div id="map_canvas" style="width:100%; height:90%"></div>
+  Opacity: 
+  <a href="javascript:overlay.setOpacity(25)">25%</a> &nbsp; 
+  <a href="javascript:overlay.setOpacity(50)">50%</a> &nbsp; 
+  <a href="javascript:overlay.setOpacity(100)">100%</a> &nbsp;
+
+  <span id="overlayToggle"></span>
+</body>
+
+</html>
+
